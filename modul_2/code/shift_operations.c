@@ -20,17 +20,14 @@ int main(){
     //use unsigned int for logical shift
     int a;
     int b; 
-    printf("Input value a (hex): ");
+    printf("Input value (hex): ");
     scanf("%x", &a);
+    printf("Shifter value (int): ");
+    scanf("%d", &b);
 
-    printf("Input value a (hex): ");
-    scanf("%x", &b);
+    printf("input: hex= %x, binary= ", a); showbits(a);
 
-    // printf("Results: hex= %x, binary= ", ~a); showbits(~a);
-    // printf("Results: hex= %x, binary= ", ~b); showbits(~b);
-
-    printf("Results a&b : hex= %x, binary= ", a&b); showbits(a&b);
-    printf("Results a|b : hex= %x, binary= ", a|b); showbits(a|b);
-    printf("Results a^b : hex= %x, binary= ", a^b); showbits(a^b);
+    printf("Results: hex= %x, binary= ", a>>b); showbits(a>>b);
     return 0;
 }
+
